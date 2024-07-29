@@ -1,19 +1,14 @@
 import React from "react";
 import "./WordCard.css";
+import WORDS from "./Dictionary";
 
-const WordCard = ({ url, word, translated, transcription, group, description }) => {
+const WordCard = ({ english, russian, transcription, tags }) => {
   return (
     <div className="WordCard">
-      <img className="wc-image" src={url} alt={word} />
-      <div className="wc-word">Имя: {word}</div>
-      <div className="wc-translated">{translated}</div>
-      <div className="wc-transcription">{transcription}
-        
-      </div>
-      <div className="wc-group">{group}
-        
-      </div>
-      <div className="wc-description">{description}</div>
+      <div className="english">Имя: {english}</div>
+      <div className="russian">{russian}</div>
+      <div className="transcription">{transcription}</div>
+      <div className="tags">{tags}</div>
     </div>
   );
 };
