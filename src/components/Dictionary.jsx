@@ -1,4 +1,4 @@
-const WORDS = [
+export const words = [
   {
     id: "16760",
     english: "word ",
@@ -72,3 +72,5 @@ const WORDS = [
     tags_json: '["   tag"]',
   },
 ];
+
+

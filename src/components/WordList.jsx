@@ -1,4 +1,5 @@
 import React, { useState, forwardRef } from 'react'
+import { words } from "./components/Dictionary.jsx";
 import MaterialTable from '@material-table/core';
 
 import AddBox from '@mui/icons-material/AddBox'
@@ -49,81 +50,7 @@ const WORDLIST = () => {
     { title: 'Группа', field: 'tags' },
   ]
 
-  const [data, setData] = useState([
-    
-        {
-            id: "16760",
-            english: "word ",
-            transcription: "[wɜːrd]",
-            russian: "слово",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16761",
-            english: "laptop ",
-            transcription: "[læptɑːp]",
-            russian: "ноутбук",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16763",
-            english: "interface",
-            transcription: "[ˈɪntərfeɪs]",
-            russian: "интерфейс",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16764",
-            english: "timer",
-            transcription: "[ˈtaɪmər]",
-            russian: "таймер",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16775",
-            english: "word ",
-            transcription: "[wɜːrd]",
-            russian: "слово",
-            tags: "general",
-            tags_json: '["general"]',
-          },
-          {
-            id: "16776",
-            english: "discover",
-            transcription: "[dɪˈskʌvər]",
-            russian: "найти ",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16777",
-            english: "secret ",
-            transcription: "[siːkrət]",
-            russian: "тайный",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16781",
-            english: "bank ",
-            transcription: "[bæŋk]",
-            russian: "банк",
-            tags: "",
-            tags_json: '[""]',
-          },
-          {
-            id: "16786",
-            english: "No",
-            transcription: "[no]",
-            russian: "Нет",
-            tags: "   tag",
-            tags_json: '["   tag"]',
-          },
-  ])
+  const [data, setData] = useState(words);
 
   return (
     <>
