@@ -1,15 +1,15 @@
-/*import React from 'react'
+import React from 'react'
 import WordCard from '../wordCard/WordCard'
-// import words from '../dictionary.jsx'
-import style from './slider.css'
-// eslint-disable-next-line
-import { useState, useEffect } from 'react'
+import { words } from "../Dictionary"
+import style from './slider.module.css'
 
-export default function Slider({words}) {
-    // eslint-disable-next-line
+import { useState } from 'react'
+
+export default function Slider() {
+    
     const [pressed, setPressed] = useState(false)
     const [cardIndex, setCardIndex] = useState(0)
-    const [learned, setLearned] = useState(0);
+    
 
     const showPrevCard = () => {
         let index = cardIndex;
@@ -35,27 +35,19 @@ export default function Slider({words}) {
         setPressed(false)
     }
 
-    const countWords = () => {
-        let learnedWords = learned;
-
-        if (learnedWords !== words.length) {
-            setLearned(learnedWords + 1);
-        }
-    };
+    
     return (
 <div className={style.main}>
             <div className={style.container}>
                 <button onClick={showPrevCard} className={style.prev_btn}><img src="./assets/arrow_left.svg" alt="" className={style.nav_btn} /></button>
                 <WordCard
-                    word={words[cardIndex].word}
+                    word={words[cardIndex].english}
                     transcription={words[cardIndex].transcription}
-                    translate={words[cardIndex].translate}
+                    translate={words[cardIndex].russian}
                     pressed={pressed}
-                    setPressed={setPressed}
-                    countWords={countWords} />
+                    setPressed={setPressed} />
                 <button onClick={showNextCard} className={style.next_btn}><img src="./assets/arrow_right.svg" alt="" className={style.nav_btn} /></button>
             </div >
-            <div className={style.word_counter}>Выучено слов: {learned}/{words.length}</div>
         </div >
     )
-}*/
+}

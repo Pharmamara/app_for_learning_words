@@ -73,4 +73,4 @@ export const words = [
   },
 ];
 
-
+export default words;

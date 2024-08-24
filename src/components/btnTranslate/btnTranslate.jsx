@@ -1,10 +1,10 @@
 import React from 'react'
-import style from './btnTranslate.css'
+import style from './btnTranslate.module.css'
 
 export default function BtnTranslate(props) {
     const handleClick = () => {
         props.setPressed(!props.pressed);
-        props.countWorlds();
+        
     };
     return (
         <div className={style.btn}>

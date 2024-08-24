@@ -1,6 +1,6 @@
 import React from 'react'
 import BtnTranslate from '../btnTranslate/btnTranslate'
-import style from "./WordCard.css"
+import style from "./WordCard.module.css"
 
 export default function WordCard(props) {
   return (

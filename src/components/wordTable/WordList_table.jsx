@@ -1,5 +1,5 @@
 import React, { useState, forwardRef } from 'react'
-import { words } from "./components/Dictionary.jsx";
+import { words } from "./components/Dictionary.js";
 import MaterialTable from '@material-table/core';
 
 import AddBox from '@mui/icons-material/AddBox'
