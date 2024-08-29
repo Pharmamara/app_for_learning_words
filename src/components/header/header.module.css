@@ -1,0 +1,13 @@
+.headerContainer {
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(49, 150, 10),
+    rgb(202, 206, 200) 54%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgb(49, 150, 10),
+    rgb(202, 206, 200) 54%
+  );
+  background: linear-gradient(180deg, rgb(49, 150, 10), rgb(202, 206, 200) 54%);
+}
