@@ -4,6 +4,22 @@ import style from "./wordTable.module.css";
 export default function WordTable({ wordItem }) {
   const { english, russian, transcription, tags } = wordItem || {};
   const [isEditMode, setEditMode] = useState(false);
+  const [name, setName] = useState(english);
+  const [nameRussian, setNameRussian] = useState(russian);
+  const [nameTranscription, setNameTranscription] = useState(transcription);
+  const [nameTag, setNameTag] = useState(tags);
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+};
+const handleNameRussianChange = (event) => {
+  setNameRussian(event.target.value);
+};
+const handleNameTranscriptionChange = (event) => {
+  setNameTranscription(event.target.value);
+};
+const handleNameTagChange = (event) => {
+  setNameTag(event.target.value);
+};
   const handleEditMode = () => {
     setEditMode(!isEditMode);
   };
@@ -16,25 +32,31 @@ export default function WordTable({ wordItem }) {
         <input
           className={style.input}
           placeholder="Введите слово"
-          defaultValue={english}
+          defaultValue={name}
+          value={name}
+          onChange={handleNameChange}
         ></input>
         <input
           className={style.input}
           placeholder="Введите перевод"
           defaultValue={russian}
+          onChange={handleNameRussianChange}
         ></input>
         <input
           className={style.input}
           placeholder="Введите траскрипцию"
           defaultValue={transcription}
+          onChange={handleNameTranscriptionChange}
+
         ></input>
         <input
           className={style.input}
           placeholder="Введите тэг"
           defaultValue={tags}
+          onChange={handleNameTagChange}
         ></input>
         <div className={style.buttons}>
-          <button className={style.btn}>сохранить</button>
+          <button className={style.btn} onClick={() => {setEditMode(!isEditMode);}}>сохранить</button>
           <button className={style.btn} onClick={handleCancel}>
             отменить
           </button>
@@ -45,10 +67,10 @@ export default function WordTable({ wordItem }) {
   const editDeleteBtns = () => {
     return (
       <>
-        <div className={style.wordItem}>{english}</div>
-        <div className={style.wordItem}>{russian}</div>
-        <div className={style.wordItem}>{transcription}</div>
-        <div className={style.wordItem}>{tags}</div>
+        <div className={style.wordItem}>{name}</div>
+        <div className={style.wordItem}>{nameRussian}</div>
+        <div className={style.wordItem}>{nameTranscription}</div>
+        <div className={style.wordItem}>{nameTag}</div>
         <div className={style.buttons}>
           <button className={style.btn} onClick={handleEditMode}>
             редактировать
