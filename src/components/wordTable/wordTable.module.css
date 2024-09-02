@@ -1,7 +1,8 @@
 .tableContainer {
+  margin: 0 auto;
   width: 90vw;
   display: grid;
-  grid-template-columns: repeat(4, 15%) 30%;
+  grid-template-columns: repeat(4, 15vw) 30vw;
   justify-content: start;
   padding: 0;
   column-gap: 0.5em;
