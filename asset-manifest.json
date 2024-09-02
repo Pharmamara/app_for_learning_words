@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/app_for_learning_words/static/css/main.9e939329.css",
+    "main.js": "/app_for_learning_words/static/js/main.14858d0d.js",
+    "static/js/453.803bf6f2.chunk.js": "/app_for_learning_words/static/js/453.803bf6f2.chunk.js",
+    "index.html": "/app_for_learning_words/index.html",
+    "main.9e939329.css.map": "/app_for_learning_words/static/css/main.9e939329.css.map",
+    "main.14858d0d.js.map": "/app_for_learning_words/static/js/main.14858d0d.js.map",
+    "453.803bf6f2.chunk.js.map": "/app_for_learning_words/static/js/453.803bf6f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e939329.css",
+    "static/js/main.14858d0d.js"
+  ]
+}
