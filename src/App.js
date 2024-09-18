@@ -14,7 +14,9 @@ function App() {
       <div className={style.App}>
         <Header />
         <Routes>
-          <Route path="/" element={<WordList />}></Route>
+          <Route path="/" element={<WordList />}>
+            Список слов
+          </Route>
           <Route path="/wordTable" element={<WordList />}>
             Список слов
           </Route>
@@ -22,7 +24,7 @@ function App() {
             Карточки слов
           </Route>
           <Route path="/wordTraining" element={<Training />}>
-            Карточки слов
+            Тренировка
           </Route>
           <Route path="*" element={<Error404 />}></Route>
         </Routes>
