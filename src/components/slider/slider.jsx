@@ -10,6 +10,7 @@ import { useState } from "react";
 export default function Slider() {
   const [pressed, setPressed] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
+  const [learned, setLearned] = useState(0);
 
   const showPrevCard = () => {
     let index = cardIndex;
@@ -35,6 +36,14 @@ export default function Slider() {
     setPressed(false);
   };
 
+  const countWords = () => {
+    let learnedWords = learned;
+
+    if (learnedWords !== words.length) {
+      setLearned(learnedWords + 1);
+    }
+  };
+
   return (
     <div className={style.main}>
       <div className={style.container}>
@@ -47,10 +56,14 @@ export default function Slider() {
           translate={words[cardIndex].russian}
           pressed={pressed}
           setPressed={setPressed}
+          countWords={countWords}
         />
         <button onClick={showNextCard} className={style.next_btn}>
           <img src={ArrowRight} alt="" className={style.nav_btn} />
         </button>
+      </div>
+      <div className={style.wordCounter}>
+        Изучено {learned} из {words.length} слов
       </div>
     </div>
   );
