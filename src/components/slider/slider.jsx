@@ -35,7 +35,7 @@ export default function Slider() {
     }
     setPressed(false);
   };
-
+  //добавлено
   const countWords = () => {
     let learnedWords = learned;
 
