@@ -11,7 +11,7 @@ export default function WordCard(props) {
         translate={props.translate}
         pressed={props.pressed}
         setPressed={props.setPressed}
-        //при нажатии кнопки Показать перевод слово в карточке приобретает статус Изучено и передается в родительский компонент (слайдер) в счетчик слов
+        //добавлено при нажатии кнопки Показать перевод слово в карточке приобретает статус Изучено и передается в родительский компонент (слайдер) в счетчик слов
         countWords={props.countWords}
       />
     </div>
