@@ -51,7 +51,7 @@
   margin: 0.8em 0;
   height: 40px;
   padding-left: 1em;
-  border: solid 2px red;
+  border: solid 2px rgb(55, 55, 55);
   background-color: rgb(245, 245, 245);
   color: black;
   overflow-wrap: break-word;
@@ -60,7 +60,9 @@
   border: 2px solid #3bc161;
   outline: none;
 }
-
-.input:hover {
+/*.input:hover {
   background-color: rgb(210, 208, 208);
+}*/
+.input.error {
+  border: 1px solid red;
 }

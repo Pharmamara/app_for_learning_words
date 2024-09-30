@@ -8,7 +8,8 @@ export default function BtnTranslate(props) {
     if (btnReference.current) {
       btnReference.current.focus();
     }
-  }, []);
+    //если не добавить условие в массив зависимостей, фокус сработает на кнопке btnTranslate только после отрисовки 1-ой карточки
+  }, [props.translate]);
 
   const handleClick = () => {
     props.setPressed(!props.pressed);
